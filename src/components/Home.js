@@ -15,7 +15,7 @@ constructor(props){
       <div>
         
         <div>
-          <p>Quantidade de Produtos</p> 
+          <p>Total de produtos:</p> 
           <select>
             <option>Preço: Crescente</option>
             <option>Preço: Decrescente</option>
