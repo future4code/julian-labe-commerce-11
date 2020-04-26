@@ -8,9 +8,7 @@ class Filtro extends React.Component {
 
 
   render () {
-  return  <div>
-      <div>
-      
+  return  <div>      
    <form className="Filter">
         <h2>Filtros:</h2>
         <p>Valor Mínimo: </p>
@@ -20,7 +18,6 @@ class Filtro extends React.Component {
         <p>Buscar Produto</p>
           <input className="input" type="text" placeholder="" />
    </form>
-      </div>
     </div>
   }
 }
