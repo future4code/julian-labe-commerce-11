@@ -37,9 +37,13 @@ class App extends React.Component {
       ],
       filtroValorMinimo: "",
       filtroValorMaximo: "",
-      filtroBuscarProduto: "",
+      filtroBuscarProduto: ""
 
     }
+  }
+
+  adicionarAoCarrinho = (item, valor) => {
+    console.log('Item:', item, 'Valor:', valor  )
   }
 
   render () {
@@ -54,7 +58,9 @@ class App extends React.Component {
     filtroValorMaximo={this.state.filtroValorMaximo} 
     filtroBuscarProduto={this.state.filtroBuscarProduto} />
     
-    <Carrinho/>
+    <Carrinho
+      adicionarAoCarrinho={this.adicionarAoCarrinho} 
+    />
   </div>
   }
 }
