@@ -28,6 +28,11 @@ class Filtro extends React.Component {
   }
     
 
+
+
+ 
+
+
   render () {
   return  <div>      
    <form className="Filter">
@@ -38,6 +43,7 @@ class Filtro extends React.Component {
           <input className="input" type="number"  onChange={this.onChangeValorMaximo} value={this.state.maximoDigitado}/>
         <p>Buscar Produto</p>
           <input className="input" type="text" onChange={this.onChangeBuscarProduto} value={this.state.buscarProdutoDigitado}/>
+
    </form>
     </div>
   }
