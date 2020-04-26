@@ -4,18 +4,19 @@ class Carrinho extends React.Component {
     constructor(props){
         super(props)
 
-        state = {
+        this.state = {
+
             temProduto: false,
             quantidadeDoItem: 1,
-            valorTotal: '',
+            valorTotal: "",
             produtos: [{
 
             }
 
             ]
         }
-        }
     }
+
 
     funcaoAdicionaProduto = () => {
         this.setState({temProduto: true})
@@ -44,7 +45,7 @@ class Carrinho extends React.Component {
             <h2>Carrinho:</h2>
             {itemNaLista}
             <div>
-                <p>Total:<b>{valorTotal}</b></p>
+                <p>Total:<b>{this.state.valorTotal}</b></p>
             </div>
         </div>        
     }
