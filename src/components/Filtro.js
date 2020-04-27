@@ -1,5 +1,17 @@
 import React from 'react';
-import './Filtro.css'
+import styled from "styled-components"
+
+const DivContainer = styled.div`
+  border: 1px solid black;
+  padding: 5px;
+  width: 30%;
+  text-align: start;
+`
+
+const Input = styled.input`
+  display:block;
+  width: 12vw;
+`
 
 
 
@@ -26,26 +38,29 @@ class Filtro extends React.Component {
   onChangeBuscarProduto= (event) => {
     this.setState({buscarProdutoDigitado: event.target.value})
   }
-    
-
-
-
  
 
 
   render () {
-  return  <div>      
-   <form className="Filter">
+  return  <DivContainer>
+    <form>
         <h2>Filtros:</h2>
-        <p>Valor Mínimo: </p>
-          <input className="input" type="number"  onChange={this.onChangeValorMinimo} value={this.state.minimoDigitado} />
-        <p>Valor Máximo: </p>
-          <input className="input" type="number"  onChange={this.onChangeValorMaximo} value={this.state.maximoDigitado}/>
-        <p>Buscar Produto</p>
-          <input className="input" type="text" onChange={this.onChangeBuscarProduto} value={this.state.buscarProdutoDigitado}/>
+        <div>
+          <label>Valor Mínimo: </label>
+          <Input type="number"  onChange={this.onChangeValorMaximo} value={this.state.maximoDigitado} />
+        </div>
 
-   </form>
-    </div>
+        <div>
+          <label>Valor Mínimo: </label>
+          <Input type="number"  onChange={this.onChangeValorMinimo} value={this.state.minimoDigitado} />
+        </div>
+
+        <div>
+          <label>Valor Mínimo: </label>
+          <Input type="number"  onChange={this.onChangeBuscarProduto} value={this.state.buscarProdutoDigitado} />
+        </div>
+      </form>
+    </DivContainer>
   }
 }
 
