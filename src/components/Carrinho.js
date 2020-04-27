@@ -1,4 +1,12 @@
 import React from 'react'
+import styled from "styled-components"
+
+const DivContainer = styled.div`
+  border: 1px solid black;
+  padding: 5px;
+  width: 30%;
+  text-align: start;
+`
 
 class Carrinho extends React.Component {
     constructor(props){
@@ -9,45 +17,21 @@ class Carrinho extends React.Component {
             temProduto: false,
             quantidadeDoItem: 1,
             valorTotal: "",
-            produtos: [{
-
-            }
-
-            ]
         }
     }
-
-
-    funcaoAdicionaProduto = () => {
-        this.setState({temProduto: true})
-        
-      }
-
-    funcaoNaoTemProduto = () => {
-        this.setState({temProduto: false})
-        
-      }
-
-
-/*     recebeValorNome = () => {
-        const dados = {
-            nome: {this.props.infoProduto.nomeDoProduto},
-        }
-    } */
-
 
     render () {
         let itemNaLista
         if(this.state.temProduto) {
             itemNaLista = this.state.produtos
         }
-        return <div>
+        return <DivContainer>
             <h2>Carrinho:</h2>
             {itemNaLista}
             <div>
                 <p>Total:<b>{this.state.valorTotal}</b></p>
             </div>
-        </div>        
+        </DivContainer>        
     }
             
 }

@@ -1,7 +1,32 @@
 import React from 'react';
 import CardProdutos  from './CardProdutos';
+import styled from "styled-components"
 
+const DivPai = styled.div`
+  padding: 0px 20px 0px 20px;
+  width: 100%;
+`
 
+const DivCardContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+`
+
+const Header = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+`
+
+const Select = styled.select`
+  height: 20px;
+`
+
+const P = styled.p`
+  font-size: 18px;
+`
 
 class Home extends React.Component {
 constructor(props){
@@ -40,19 +65,20 @@ constructor(props){
       return <CardProdutos key={produto.id} infoProduto={produto}/>
     })
     return  (
-      <div>
+      <DivPai>
         
-        <div>
-          <p>Total de produtos:</p> 
-          <select>
+        <Header>
+          <P>Quantidade de Produtos:</P> 
+          <Select>
             <option>Preço: Crescente</option>
             <option>Preço: Decrescente</option>
-          </select>
-        </div>
-        <div>
+          </Select>
+        </Header>
+
+        <DivCardContainer>
           {listaDeComponentes}
-        </div>
-      </div>
+        </DivCardContainer>
+      </DivPai>
     )
 
 }
